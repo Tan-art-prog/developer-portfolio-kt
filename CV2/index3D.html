@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bàng Khải Tấn — 3D Portfolio & CV</title>
+  <meta name="description" content="3D Portfolio của Bàng Khải Tấn — Backend & Software Engineer." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/cv.css" />
+</head>
+<body>
+
+  <div class="scroll-progress"><span id="scrollProgressBar"></span></div>
+
+  <div class="ambient">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="orb orb-three"></div>
+    <div class="grid-plane"></div>
+  </div>
+
+  <header class="site-header">
+    <a href="#" class="brand">
+      <img src="assets/images/logo-kt-tech-final.jpg" class="brand-logo" alt="KT Logo" />
+      <span>Bàng Khải Tấn</span>
+    </a>
+
+    <nav class="desktop-nav">
+      <a href="#about" class="active" data-i18n="navAbout">Giới thiệu</a>
+      <a href="#approach" data-i18n="navApproach">Cách làm việc</a>
+      <a href="#projects" data-i18n="navProjects">Dự án</a>
+      <a href="#skills" data-i18n="navSkills">Năng lực</a>
+      <a href="#contact" data-i18n="navContact">Liên hệ</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="language-picker">
+        <select id="languageSelect" aria-label="Chọn ngôn ngữ">
+          <option value="vi">VI</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+
+      <button id="themeButton" class="icon-button" aria-label="Đổi giao diện">
+        <span>☀</span>
+      </button>
+
+      <a href="#contact" class="button small-cta" data-i18n="workCta">
+        Trao đổi công việc <span>↗</span>
+      </a>
+
+      <button id="menuButton" class="menu-button" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav id="mobileNav" class="mobile-nav">
+    <a href="#about" data-i18n="navAbout">Giới thiệu</a>
+    <a href="#approach" data-i18n="navApproach">Cách làm việc</a>
+    <a href="#projects" data-i18n="navProjects">Dự án</a>
+    <a href="#skills" data-i18n="navSkills">Năng lực</a>
+    <a href="#contact" data-i18n="navContact">Liên hệ</a>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="section hero" id="about">
+      <div class="hero-copy">
+        <div class="availability">
+          <span></span>
+          <b data-i18n="availability">Sẵn sàng cho cơ hội Internship / Fresher</b>
+        </div>
+
+        <p class="overline" data-i18n="heroOverline">SOFTWARE ENGINEERING · HỒ CHÍ MINH</p>
+        <h1 data-i18n-html="heroTitle">Kiến tạo hệ thống<br><span class="gradient-text">chạy được thật.</span></h1>
+        
+        <p class="lead" data-i18n-html="heroLead">
+          Mình là <strong>Bàng Khải Tấn</strong>, Backend Developer & Software Engineer tập trung vào C#/.NET, SQL Server và QA Testing. Mình biến yêu cầu thực tế thành hệ thống ổn định, dữ liệu chặt chẽ và phần mềm chất lượng cao.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="button button-primary" data-i18n="exploreProjects">Khám phá dự án ↳</a>
+          <a href="https://github.com/Tan-art-prog" target="_blank" class="button button-ghost">
+            <i class="fa-brands fa-github"></i> GitHub Profile ↗
+          </a>
+        </div>
+
+        <div class="hero-proof">
+          <div>
+            <strong>100%</strong>
+            <span data-i18n="publicRepos">Mã nguồn minh bạch</span>
+          </div>
+          <div>
+            <strong>03+</strong>
+            <span data-i18n="featuredProducts">Sản phẩm thực tế</span>
+          </div>
+          <div>
+            <strong>Ready</strong>
+            <span data-i18n="zynkCommits">Sẵn sàng nhận việc</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero 3D Stage -->
+      <div class="hero-visual">
+        <div class="profile-stage" data-scene>
+          <div class="scene-grid"></div>
+          <div class="scene-particles">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+
+          <div class="orbit"></div>
+          <div class="orbit orbit-b"></div>
+
+          <div class="scene-cube cube-one"><i></i><i></i><i></i></div>
+          <div class="scene-cube cube-two"><i></i><i></i><i></i></div>
+
+          <div class="floating-chip chip-dotnet"><i></i> .NET / C#</div>
+          <div class="floating-chip chip-postgres"><i></i> SQL Server</div>
+          <div class="floating-chip chip-signal"><i></i> QA Automation</div>
+
+          <div class="identity-card tilt-card" data-tilt-strength="7">
+            <div class="card-topline">
+              <span>DEVELOPER ID</span>
+              <span class="live-dot">● ONLINE</span>
+            </div>
+
+            <div class="avatar-wrap">
+              <div class="avatar-ring"></div>
+              <img src="https://avatars.githubusercontent.com/u/184761430?s=400&u=0f82fed016630c4e07baab04cf2b681c88216281&v=4" alt="Bàng Khải Tấn" />
+            </div>
+
+            <h2>Bàng Khải Tấn</h2>
+            <p data-i18n="role">Backend · Software Engineer</p>
+
+            <div class="code-line">
+              <span>const</span> focus = <b>"Build with impact"</b>;
+            </div>
+
+            <div class="card-footer">
+              <span>@Tan-art-prog</span>
+              <span>HCMC, VN</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee Tech Scroll -->
+    <div class="marquee">
+      <div>
+        <span>C# / .NET <i>✦</i></span>
+        <span>ASP.NET MVC <i>✦</i></span>
+        <span>SQL SERVER <i>✦</i></span>
+        <span>GAME SERVER LOGIC <i>✦</i></span>
+        <span>SELENIUM WEBDRIVER <i>✦</i></span>
+        <span>RESTFUL API <i>✦</i></span>
+        <span>DATABASE MODELING <i>✦</i></span>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="section section-block" id="about-detail">
+      <div class="section-heading reveal">
+        <div>
+          <span class="section-index">01</span>
+          <p data-i18n="aboutLabel">GIỚI THIỆU</p>
+        </div>
+        <h2 data-i18n-html="aboutTitle">Tư duy hệ thống,<br><span class="muted-heading">chất lượng sản phẩm.</span></h2>
+      </div>
+
+      <div class="about-layout reveal">
+        <div class="about-story glass-panel">
+          <p class="large-copy" data-i18n="aboutLead">
+            Sinh viên Công nghệ Thông tin tại HUFLIT, định hướng Backend & Game Server. Mình yêu thích việc thiết kế dữ liệu, xây dựng luồng xử lý máy chủ, tối ưu hiệu năng và tích hợp kiểm thử tự động thành sản phẩm có thể sử dụng thực tế.
+          </p>
+          <p data-i18n="aboutBody">
+            Từ hệ thống BookStore Online đến nền tảng quản lý thuê xe, mình đã làm việc với kiến trúc MVC, Entity Framework, Selenium WebDriver, thanh toán trực tuyến, cloud media và các tính năng AI hỗ trợ, và mình luôn chú trọng tính toàn vẹn dữ liệu và trải nghiệm thực tế của người dùng.
+          </p>
+          <div class="about-tags">
+            <span>Problem solving</span>
+            <span>Ownership</span>
+            <span>Team collaboration</span>
+            <span>Product thinking</span>
+          </div>
+        </div>
+
+        <div class="about-cards">
+          <div class="metric-card tilt-card">
+            <i class="fa-solid fa-server metric-icon" style="display: none;"></i>
+            <small data-i18n="directionLabel">ĐỊNH HƯỚNG</small>
+            <h3 data-i18n="directionText">Backend & Game Server</h3>
+            <p data-i18n="directionSub">Xây dựng API, cơ sở dữ liệu và logic máy chủ trò chơi.</p>
+          </div>
+          <div class="metric-card tilt-card">
+            <i class="fa-solid fa-graduation-cap metric-icon" style="display: none;"></i>
+            <small data-i18n="educationLabel">HỌC VẤN</small>
+            <h3 data-i18n="educationText">HUFLIT University</h3>
+            <p data-i18n="educationSub">Software Engineering · Thành phố Hồ Chí Minh.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="section section-block approach-section" id="approach">
+      <div class="section-heading reveal">
+        <div>
+          <span class="section-index">02</span>
+          <p data-i18n="approachLabel">CÁCH MÌNH LÀM VIỆC</p>
+        </div>
+        <h2 data-i18n-html="approachTitle">Từ bài toán đến<br><span class="muted-heading">một sản phẩm vận hành được.</span></h2>
+      </div>
+
+      <div class="approach-grid reveal">
+        <div class="approach-card">
+          <span class="approach-step">PHASE 01</span>
+          <div>
+            <h3 data-i18n="approachOneTitle">Phân tích & Thiết kế dữ liệu</h3>
+            <p data-i18n="approachOneBody">Bắt đầu bằng việc mô hình hóa cơ sở dữ liệu chặt chẽ, phân tích luồng dữ liệu và thiết kế cấu trúc hệ thống rõ ràng trước khi code.</p>
+          </div>
+        </div>
+        <div class="approach-card">
+          <span class="approach-step">PHASE 02</span>
+          <div>
+            <h3 data-i18n="approachTwoTitle">Xây dựng Logic máy chủ</h3>
+            <p data-i18n="approachTwoBody">Sử dụng C#/.NET để phát triển API, tối ưu hóa truy vấn SQL Server và giải quyết các bài toán xử lý đồng bộ trạng thái.</p>
+          </div>
+        </div>
+        <div class="approach-card">
+          <span class="approach-step">PHASE 03</span>
+          <div>
+            <h3 data-i18n="approachThreeTitle">Kiểm thử & Đảm bảo ổn định</h3>
+            <p data-i18n="approachThreeBody">Triển khai các kịch bản kiểm thử tự động với Selenium và NUnit nhằm loại bỏ lỗi hồi quy, đảm bảo server vận hành bền bỉ.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section section-block" id="projects">
+      <div class="section-heading reveal">
+        <div>
+          <span class="section-index">03</span>
+          <p data-i18n="projectsLabel">DỰ ÁN TIÊU BIỂU</p>
+        </div>
+        <h2 data-i18n-html="projectsTitle">Sản phẩm đã xây,<br><span class="muted-heading">không chỉ là ý tưởng.</span></h2>
+      </div>
+
+      <!-- Featured Project 1: BookStore -->
+      <div class="featured-project clickable-project reveal" data-project="bookstore" tabindex="0">
+        <div class="project-copy">
+          <div class="project-meta">
+            <span>00 · FEATURED · E-COMMERCE</span>
+            <span>2026</span>
+          </div>
+          <h3>BookStore Management</h3>
+          <p data-i18n="bookstoreDescription">Website thương mại điện tử bán sách với luồng mua hàng, đối soát thanh toán tự động SePay, PayPal, tích hợp AI Gemini và lưu trữ ảnh Cloudinary.</p>
+          <ul class="project-points">
+            <li data-i18n="bookstorePoint1">Mô hình MVC, Entity Framework và hệ thống quản trị danh mục.</li>
+            <li data-i18n="bookstorePoint2">Tự động hóa đối soát thanh toán và bảo mật User Secrets.</li>
+            <li data-i18n="bookstorePoint3">Tích hợp AI Gemini xử lý dữ liệu.</li>
+          </ul>
+          <div class="project-actions">
+            <a href="https://github.com/Tan-art-prog/BookStore-Management" target="_blank" class="text-link" data-i18n="viewSource">Xem mã nguồn trên GitHub ↗</a>
+          </div>
+          <span class="detail-hint" data-i18n="clickForDetails">Nhấn vào thẻ để xem chi tiết →</span>
+        </div>
+
+        <div class="project-window tilt-card">
+          <div class="window-bar">
+            <span></span><span></span><span></span>
+            <b>ARCHITECTURE ARCH</b>
+          </div>
+          <div class="architecture">
+            <div class="arch-node"><small>PRESENTATION</small><strong>ASP.NET MVC</strong><span>Views & Controllers</span></div>
+            <div class="arch-arrow">➔</div>
+            <div class="arch-node"><small>DATABASE</small><strong>SQL Server</strong><span>Entity Framework</span></div>
+            <div class="arch-grid">
+              <div><small>PAYMENT</small><strong>SePay & PayPal</strong></div>
+              <div><small>AI / STORAGE</small><strong>Gemini & Cloudinary</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid Projects -->
+      <div class="project-grid reveal">
+        <!-- Project 2 -->
+        <div class="project-card clickable-project tilt-card" data-project="thuexe" tabindex="0">
+          <span class="project-number">01</span>
+          <span class="project-label">ASP.NET MVC · SYSTEM</span>
+          <h3>Quản Lý Thuê Xe</h3>
+          <p>Hệ thống quản lý hợp đồng thuê xe toàn diện. Xây dựng phân hệ quản trị danh mục, theo dõi trạng thái xe và tích hợp bộ kịch bản kiểm thử tự động (Test Automation) bằng C# Selenium WebDriver nhằm đảm bảo độ ổn định.</p>
+          <div class="project-stack">
+            <span>C#</span><span>MVC</span><span>Selenium</span><span>SQL Server</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/Tan-art-prog/ASPNET-MVC-THUEXE" target="_blank">GitHub ↗</a>
+          </div>
+          <span class="detail-hint" data-i18n="clickForDetails">Nhấn vào thẻ để xem chi tiết →</span>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card clickable-project tilt-card" data-project="mystore" tabindex="0">
+          <span class="project-number">02</span>
+          <span class="project-label">FRONTEND · E-COMMERCE</span>
+          <h3>MyStore</h3>
+          <p>Phát triển giao diện UI/UX hoàn chỉnh cho website cửa hàng trực tuyến tĩnh. Tập trung vào việc xử lý responsive, tối ưu hóa trải nghiệm người dùng và thiết kế bố cục sản phẩm chuẩn mực trên trình duyệt web.</p>
+          <div class="project-stack">
+            <span>JavaScript</span><span>HTML</span><span>CSS</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/Tan-art-prog/23DH113167_MyStore" target="_blank">GitHub ↗</a>
+          </div>
+          <span class="detail-hint" data-i18n="clickForDetails">Nhấn vào thẻ để xem chi tiết →</span>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card clickable-project tilt-card" data-project="lab03" tabindex="0">
+          <span class="project-number">03</span>
+          <span class="project-label">C# · CORE OOP</span>
+          <h3>C# Lab 03</h3>
+          <p>Dự án minh họa việc áp dụng chặt chẽ các nguyên lý lập trình hướng đối tượng (OOP) vào ứng dụng thực tế. Xử lý thuật toán, quản lý luồng dữ liệu cơ bản và định hình tư duy phát triển phần mềm trong hệ sinh thái .NET.</p>
+          <div class="project-stack">
+            <span>C#</span><span>.NET</span><span>OOP</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/Tan-art-prog/BangKhaiTan_Lab03" target="_blank">GitHub ↗</a>
+          </div>
+          <span class="detail-hint" data-i18n="clickForDetails">Nhấn vào thẻ để xem chi tiết →</span>
+        </div>
+        
+        <!-- Project 5 -->
+        <div class="project-card clickable-project tilt-card" data-project="lab05" tabindex="0">
+          <span class="project-number">04</span>
+          <span class="project-label">C# · ADVANCED</span>
+          <h3>C# Lab 05</h3>
+          <p>Mở rộng tư duy phát triển phần mềm với các cấu trúc dữ liệu phức tạp. Áp dụng logic máy chủ cơ bản, xử lý các tác vụ dữ liệu và tinh chỉnh cấu trúc mã nguồn C# để đạt được hiệu năng vận hành ổn định.</p>
+          <div class="project-stack">
+            <span>C#</span><span>.NET</span><span>Data Structures</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/Tan-art-prog/Bangkhaitan_Lab05" target="_blank">GitHub ↗</a>
+          </div>
+          <span class="detail-hint" data-i18n="clickForDetails">Nhấn vào thẻ để xem chi tiết →</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-block" id="skills">
+      <div class="section-heading reveal">
+        <div>
+          <span class="section-index">04</span>
+          <p data-i18n="skillsLabel">NĂNG LỰC</p>
+        </div>
+        <h2 data-i18n-html="skillsTitle">Công nghệ phục vụ<br><span class="muted-heading">bài toán thực tế.</span></h2>
+      </div>
+
+      <div class="skill-board glass-panel reveal">
+        <div class="skill-intro">
+          <h3 data-i18n="skillIntroTitle">Từ dữ liệu đến chất lượng.</h3>
+          <p data-i18n="skillIntroBody">Mình ưu tiên nền tảng thuật toán, kiến trúc cơ sở dữ liệu bền vững và chất lượng mã nguồn kiểm thử chuẩn mực.</p>
+          <div class="radar"><span></span><span></span><span></span><i></i></div>
+        </div>
+
+        <div class="skill-groups">
+          <article>
+            <div class="skill-head"><span>01</span><h4>Backend & .NET</h4></div>
+            <p>C# (.NET), ASP.NET MVC, Entity Framework, RESTful API, OOP & Design Patterns.</p>
+          </article>
+          <article>
+            <div class="skill-head"><span>02</span><h4>Cơ sở dữ liệu</h4></div>
+            <p>SQL Server (SSMS), MySQL, Thiết kế CSDL quan hệ, Phân mảnh dữ liệu phân tán.</p>
+          </article>
+          <article>
+            <div class="skill-head"><span>03</span><h4>QA & Automation</h4></div>
+            <p>Selenium WebDriver (C#), NUnit Framework, Manual Testing, Thiết kế Test Case & Matrix.</p>
+          </article>
+          <article>
+            <div class="skill-head"><span>04</span><h4>Công cụ & Khác</h4></div>
+            <p>Git, GitHub, Visual Studio, StarUML, Postman, Cloudinary API, SePay Integration.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section reveal" id="contact">
+      <div class="contact-scene">
+        <div class="contact-orbit"></div>
+        <div class="contact-cube"></div>
+      </div>
+
+      <p class="contact-kicker">● READY TO WORK</p>
+      <h2 data-i18n-html="contactTitle">Có một cơ hội phù hợp?<br><span class="gradient-text">Mình sẵn sàng trao đổi.</span></h2>
+      <p data-i18n="contactBody">Mình đang tìm kiếm cơ hội Backend, QA Automation và Software Engineering Internship/Fresher tại Thành phố Hồ Chí Minh.</p>
+
+      <div class="contact-actions">
+        <a href="mailto:khaitan2105@gmail.com" class="button button-primary">Gửi email cho mình ↗</a>
+        <a href="tel:0707772869" class="button button-ghost">Gọi 0707 772 869 ↗</a>
+      </div>
+
+      <div class="contact-grid">
+        <div>
+          <small>EMAIL</small>
+          <strong>khaitan2105@gmail.com</strong>
+          <span>↗</span>
+        </div>
+        <div>
+          <small>ĐIỆN THOẠI</small>
+          <strong>0707 772 869</strong>
+          <span>↗</span>
+        </div>
+        <div>
+          <small>HIỆN TẠI</small>
+          <strong>Thành phố Hồ Chí Minh</strong>
+          <span>◉</span>
+        </div>
+        <div>
+          <small>THƯỜNG TRÚ</small>
+          <strong>Phường Minh Phụng, TP. Hồ Chí Minh</strong>
+          <span>⌂</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Modal Dialog -->
+  <dialog id="projectDialog" class="project-dialog">
+    <div class="dialog-shell">
+      <button id="dialogClose" class="dialog-close" aria-label="Đóng">✕</button>
+      <div class="dialog-hero">
+        <span id="dialogProjectIndex" class="dialog-index">00</span>
+        <p id="dialogProjectKicker" class="dialog-kicker">PROJECT</p>
+        <h2 id="dialogProjectTitle">Tên dự án</h2>
+        <p id="dialogProjectSummary">Mô tả tóm tắt dự án.</p>
+        <div id="dialogProjectLinks" class="dialog-links"></div>
+      </div>
+      <div class="dialog-body">
+        <div>
+          <p class="dialog-label" data-i18n="detailHighlights">TÍNH NĂNG NỔI BẬT</p>
+          <ul id="dialogProjectFeatures" class="dialog-feature-list"></ul>
+        </div>
+        <aside>
+          <div>
+            <small data-i18n="detailRole">VAI TRÒ</small>
+            <strong id="dialogProjectRole">Developer</strong>
+          </div>
+          <div>
+            <small data-i18n="detailArchitecture">KIẾN TRÚC</small>
+            <strong id="dialogProjectArchitecture">Clean Architecture</strong>
+          </div>
+          <div>
+            <small data-i18n="detailStatus">TRẠNG THÁI</small>
+            <strong id="dialogProjectStatus">Hoàn thành</strong>
+          </div>
+        </aside>
+      </div>
+      <div id="dialogProjectStack" class="dialog-stack"></div>
+    </div>
+  </dialog>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div>
+      <img src="assets/images/logo-kt-tech-final.jpg" class="brand-logo" alt="KT Logo" />
+      <span data-i18n="designedBy">Thiết kế & phát triển bởi Bàng Khải Tấn</span>
+    </div>
+    <a href="#about" data-i18n="backToTop">Lên đầu trang ↑</a>
+  </footer>
+
+  <script src="../assets/js/cv.js"></script>
+</body>
+</html>
